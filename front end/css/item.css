@@ -1,0 +1,428 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+th, td {
+    text-align: center;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-color: #000000;
+}
+
+/*aside*/
+
+aside {
+    width: 150px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-third-section {
+    width: 100%;
+    height: 20%;
+}
+
+.aside-third-section > img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #B5C0D0;
+}
+
+.aside-first-section {
+    width: 50px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+}
+
+.aside-first-section > div > span {
+    width: fit-content;
+    font-size: 10px;
+    color: #B5C0D0;
+    position: absolute;
+    display: block;
+    padding-top: 12px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-family: Arial;
+    letter-spacing: 2px;
+}
+
+.aside-second-section {
+    width: 100px;
+    height: 15%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    border-top: 1px solid #2B3A55;
+}
+
+.aside-second-section > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.aside-second-section > div > i {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.aside-second-section > div > i:first-child {
+    top: 30px;
+}
+
+.aside-second-section > div > i:last-child {
+    bottom: 30px;
+}
+
+.aside-second-section > div > div {
+    width: 17px;
+    height: 14px;
+    background-color: #FFC55A;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 18px;
+    left: 15px;
+}
+
+.alerts {
+    font-size: 8px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    font-weight: bold;
+    color: white;
+}
+
+/*main*/
+main {
+    width: calc(100vw - 155px);
+    height: calc(100% - 20px);
+    position: absolute;
+    background-color: #F5F5F5;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 20px;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-top: 10px;
+}
+
+.title-searchbar {
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 10px;
+}
+
+.title-searchbar > span {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.search-bar-container {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    height: fit-content;
+    margin: auto;
+}
+
+#customer-search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.radio-btns {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    right: 0;
+    left: 700px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    align-items: center;
+}
+
+.radio-btns > label {
+    vertical-align: middle;
+    display: block;
+    top: 5px;
+    /*font-weight: bold;*/
+    /*text-transform: uppercase;*/
+    font-family: Arial;
+    font-size: 13px;
+}
+
+#cus-option1, #cus-option2, #cus-option3 {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+#cus-option2, #cus-option3 {
+    margin-left: 10px;
+}
+
+.title-searchbar > button {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
+    border: none;
+    background-color: #F5F5F5;
+}
+
+/*customer container*/
+.customer-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.customer-container > div {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.customer-container > div:first-child {
+    background-color: #FB9AD1;
+}
+
+.customer-container > div:nth-child(2) {
+    background-color: #4bc0c0;
+}
+
+.customer-container > div:nth-child(3) {
+    background-color: #9fcdff;
+}
+
+.customer-container > div:first-child > span:first-child,
+.customer-container > div:nth-child(2) > span:first-child,
+.customer-container > div:last-child > span:first-child {
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.customer-container > div:first-child > span:last-child,
+.customer-container > div:nth-child(2) > span:last-child,
+.customer-container > div:last-child > span:last-child {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+}
+
+/*customer table*/
+.customer-table-container {
+    height: 495px;
+    overflow-y: scroll;
+    /*background-color: #9fcdff;*/
+}
+#customer-detail-table {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    border-collapse: collapse;
+}
+
+#customer-detail-table > thead {
+    background-color: #2D3250;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    font-family: Arial;
+    font-size: 13px;
+    color: #F5F5F5;
+}
+
+#customer-detail-table > tbody > tr {
+    border-bottom: 1px solid #dddddd;
+}
+#customer-detail-table > tbody > tr:nth-child(even),  #customer-detail-table > tbody > tr:nth-child(even) > .action-td > button {
+    background: #dddddd;
+}
+#customer-detail-table > tbody {
+    font-family: Arial;
+    font-size: 13px;
+}
+
+#customer-detail-table > tbody > tr> td {
+    padding: 10px;
+}
+.btn-join-loyalty{
+    /*background-color: #dddddd;*/
+    border: none
+}
+.action-td {
+    /*width: 100px;*/
+}
+.action-td > button {
+    background-color: #F5F5F5;
+    border: none;
+    /*margin: 0 4px;*/
+}
+.emp-level-lbl > label {
+    background-color: #4bc0c0;
+    border-radius: 20px;
+    padding: 2px 7px;
+}
+.cus-name-id>span:last-child {
+    color: #7F5283;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/*popup customer*/
+.cus-popup {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    background-color: #dddddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: none;
+    border: 1px solid #35374B;
+}
+#btn-cus-popup-remove {
+    background-color: black;
+    position: absolute;
+    z-index: 3;
+    right: 10px;
+    border: none;
+    top: 18px;
+}
+/*save popup customer*/
+.cus-save-popup {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.cus-save-popup>span {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    background-color: black;
+    color: #F5F5F5;
+    letter-spacing: 1px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.cus-form-group>label {
+    font-size: 17px;
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.cus-form-group input, .cus-form-group select {
+    width: 90%;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.cus-form-group {
+    margin-left: 50px;
+}
+#cus-save-update-btn {
+    width: 90%;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: #F5F5F5;
+    margin-left: 5%;
+}
+

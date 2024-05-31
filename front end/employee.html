@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee details</title>
+    <link rel="icon" type="image/x-icon" href="assets/AAD%20final%20Logo.jpeg">
+    <meta name="keyword" content="html">
+    <meta name="description" content="dashboard">
+    <meta name="author" content="il=jse">
+    <meta http-equiv="refresh" content="10000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/employee.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+<aside>
+    <section class="aside-third-section">
+        <img src="assets/AAD%20final%20Logo.jpeg" alt="logo">
+    </section>
+
+    <section class="aside-first-section">
+        <div>
+            <i class="fa-solid fa-house fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Home</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user-tie fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Employee</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Sales</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Customer</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-cart-flatbed fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Inventory</span>
+        </div>
+    </section>
+    <section class="aside-second-section">
+        <div>
+            <i class="fa-solid fa-bell fa-xl" style="color: #B5C0D0;"></i>
+            <div><span class="alerts">10</span></div>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 fa-xl" style="color: #ec0909;"></i>
+        </div>
+    </section>
+
+</aside>
+<main>
+    <header>
+        <section class="title-searchbar">
+            <span>Employee Service</span>
+            <div class="search-bar-container">
+                <input type="text" id="employee-search-input" placeholder="Search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="radio-btns">
+                <label for="emp-option1">
+                    <input type="radio" id="emp-option1" name="employeeOption" value="all" checked> All
+                </label>
+                <br>
+                <label for="emp-option2">
+                    <input type="radio" id="emp-option2" name="employeeOption" value="user"> Users
+                </label>
+                <label for="emp-option3">
+                    <input type="radio" id="emp-option3" name="employeeOption" value="admin"> Admins
+                </label>
+            </div><button id="btn-add-emp-popup"><i class="fa-solid fa-user-plus fa-xl"></i></button>
+
+        </section>
+    </header>
+    <section class="employee-container">
+        <div class="emp-card-container"></div>
+<!--        employee card-->
+<!--        <div class="emp-card">-->
+<!--            <div>-->
+<!--                <div>-->
+<!--                    <i class="fa-solid fa-circle fa-2xs" style="color: #B197FC;"></i>-->
+<!--                    <span>admin</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img src="assets/user.jpg" width="100px" height="100px" alt="pro-pic">-->
+<!--                <span>kushan madusha</span>-->
+<!--                <span>(E09u87)</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>Status</span>-->
+<!--                <span>Married</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>Designation</span>-->
+<!--                <span>Cashier</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>DOB</span>-->
+<!--                <span>2002/09/23</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>Branch</span>-->
+<!--                <span>Aralaganwila</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>Address</span>-->
+<!--                <span>No,216 Medagama Dewagala</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>Postal</span>-->
+<!--                <span>51000</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>Email</span>-->
+<!--                <span>kushanmadusha62@gmail.com</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>EMG Person</span>-->
+<!--                <span>D.M Basnayaka</span>-->
+<!--            </div>-->
+<!--            <div class="emp-detail-txt">-->
+<!--                <span>EMG Number</span>-->
+<!--                <span>077 5017154</span>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <button><i class="fa-regular fa-trash-can fa-lg" style="color: #f20713;"></i></button>-->
+<!--                <button class="btn-update-employee"><i class="fa-regular fa-pen-to-square fa-lg"></i></i></button>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="emp-card-upper"></div>
+        <section class="emp-popup">
+            <section class="emp-save-popup">
+                <span id="emp-popup-header">ADD NEW EMPLOYEE</span>
+                <div>
+                    <img src="assets/user.jpg" width="100" height="100">
+                    <input type="file" id="emp-save-fileInput" style="display: none;">
+                    <i class="fa-solid fa-camera fa-lg" style="color: #7a7c7f;cursor: pointer" onclick="document.getElementById('emp-save-fileInput').click()"></i>
+                </div>
+
+                <form class="emp-save-form">
+                    <div class="emp-form-group">
+                        <label for="employeeName">Employee Name:</label><br>
+                        <input type="text" id="employeeName" name="employeeName" placeholder="kushan madusha" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="gender">Gender:</label><br>
+                        <select id="gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="status">Status:</label><br>
+                        <select id="status" name="status" required>
+                            <option value="married">Married</option>
+                            <option value="unmarried">Unmarried</option>
+                            <option value="devorced">Devorced</option>
+                        </select><br><br>
+                    </div>
+
+                    <div class="emp-form-group">
+                        <label for="designation">Designation:</label><br>
+                        <input type="text" id="designation" name="designation" placeholder="cashier" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="accessRole">Access Role:</label><br>
+                        <select id="accessRole" name="accessRole" required>
+                            <option value="ADMIN">Admin</option>
+                            <option value="USER">User</option>
+                        </select><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="dob">Date of Birth:</label><br>
+                        <input type="date" id="dob" name="dob" placeholder="20/02/2002" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="dateOfJoin">Date of Joining:</label><br>
+                        <input type="date" id="dateOfJoin" name="dateOfJoin" placeholder="15/05/2022" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="addressLine1">Address Line 01:</label><br>
+                        <input type="text" id="addressLine1" name="addressLine1" placeholder="216" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="addressLine2">Address Line 02:</label><br>
+                        <input type="text" id="addressLine2" name="addressLine2" placeholder="medagama dewagala"><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="addressLine3">Address Line 03:</label><br>
+                        <input type="text" id="addressLine3" name="addressLine3" placeholder="polonnaruwa" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="addressLine4">Address Line 04:</label><br>
+                        <input type="text" id="addressLine4" name="addressLine4" placeholder="rajamawatha" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="addressLine5">Address Line 05:</label><br>
+                        <input type="text" id="addressLine5" name="addressLine5" placeholder="51000" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="contactNo">Contact No.:</label><br>
+                        <input type="tel" id="contactNo" name="contactNo" pattern="[0-9]{10}" placeholder="0772461021" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="kushanmadusha62@gmail.com" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="emergencyContactPerson">Emergency Contact Person:</label><br>
+                        <input type="text" id="emergencyContactPerson" name="emergencyContactPerson" placeholder="D.M Basnayaka" required><br><br>
+                    </div>
+                    <div class="emp-form-group">
+                        <label for="emergencyContact">Emergency Contact:</label><br>
+                        <input type="tel" id="emergencyContact" name="emergencyContact" placeholder="0789000255" pattern="[0-9]{10}"
+                               required><br><br>
+
+                        <button id="emp-save-update-btn">Save Employee</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </section>
+</main>
+<script src="lib/jquary.min.js"></script>
+<script src="controller/EmployeeController.js" type="module"></script>
+</body>
+</html>

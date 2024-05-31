@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard</title>
+    <link rel="icon" type="image/x-icon" href="assets/AAD%20final%20Logo.jpeg">
+    <meta name="keyword" content="html">
+    <meta name="description" content="dashboard">
+    <meta name="author" content="il=jse">
+    <meta http-equiv="refresh" content="10000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+<aside>
+    <section class="aside-third-section">
+        <img src="assets/AAD%20final%20Logo.jpeg" alt="logo">
+    </section>
+
+    <section class="aside-first-section">
+        <div>
+            <i class="fa-solid fa-house fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Home</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user-tie fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Employee</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Sales</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Customer</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-cart-flatbed fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Inventory</span>
+        </div>
+    </section>
+    <section class="aside-second-section">
+        <div>
+            <i class="fa-solid fa-bell fa-xl" style="color: #B5C0D0;"></i>
+            <div><span class="alerts">10</span></div>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 fa-xl" style="color: #ec0909;"></i>
+        </div>
+    </section>
+
+</aside>
+<main>
+    <section class="user-date">
+        <span>2002/08/27</span>
+        <span>Ashan Devinda</span>
+    </section>
+    <section class="today-sale-sum">
+        <div>
+            <span>Today's Sales Summary,</span>
+            <input type="date" name="datepicker">
+        </div>
+        <section class="sales-sum-square">
+            <div class="sale-square">
+                <i class="fa-solid fa-comments-dollar fa-2xl" style="color: #FF6500;"></i>
+                <span class="count">Rs 12000</span>
+                <span class="sum-title">Total Sales</span>
+            </div>
+            <div class="sale-square">
+                <i class="fa-solid fa-hand-holding-dollar fa-2xl" style="color: #BC7FCD;"></i>
+                <span class="count">Rs 12000</span>
+                <span class="sum-title">Total Profit</span>
+            </div>
+            <div class="sale-square">
+                <i class="fa-solid fa-chart-simple fa-2xl" style="color: #704264;"></i>
+                <span class="count">Rs 12000</span>
+                <span class="sum-title">Most Sale Item</span>
+            </div>
+            <div class="sale-square">
+                <i class="fa-solid fa-circle-check fade fa-2xl" style="color: #FC819E;"></i>
+                <span class="count">Rs 12000</span>
+                <span class="sum-title">Total Orders</span>
+            </div>
+            <div class="sale-square">
+                <i class="fa-solid fa-layer-group fa-2xl" style="color: #B99470;"></i>
+                <span class="count">Rs 12000</span>
+                <span class="sum-title">Product Category</span>
+            </div>
+            <div class="sale-square">
+                <i class="fa-solid fa-handshake fa-2xl" style="color: #4793AF;"></i>
+                <span class="count">Rs 12000</span>
+                <span class="sum-title">New Customers</span>
+            </div>
+        </section>
+    </section>
+    <section class="charts">
+        <div>
+            <span>Sales By Category,</span>
+            <div class="pie-chart">
+                <div class="slice" id="slice1"></div>
+                <div class="slice" id="slice2"></div>
+                <div class="slice" id="slice3"></div>
+                <div class="slice" id="slice4"></div>
+                <div class="slice" id="slice5"></div>
+            </div>
+            <div class="center-circle"></div>
+            <div class="item-name-color">
+                <div></div>
+                <span>Red Shoe</span>
+            </div>
+        </div>
+        <div>
+        </div>
+        <div class="top10-cus">
+            <span>Today's Top 10 Customers,</span>
+            <div>
+                <div>
+                    <span>#</span>
+                    <span>Name</span>
+                    <span>Points</span>
+                </div>
+                <div class="cus-row">
+                    <span>01</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>02</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>03</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>04</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>05</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>06</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>07</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>08</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>09</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+                <div class="cus-row">
+                    <span>10</span>
+                    <span>Ashan Devinda</span>
+                    <span>2000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

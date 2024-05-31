@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer details</title>
+    <link rel="icon" type="image/x-icon" href="assets/AAD%20final%20Logo.jpeg">
+    <meta name="keyword" content="html">
+    <meta name="description" content="dashboard">
+    <meta name="author" content="il=jse">
+    <meta http-equiv="refresh" content="100000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/customer.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+<aside>
+    <section class="aside-third-section">
+        <img src="assets/AAD%20final%20Logo.jpeg" alt="logo">
+    </section>
+
+    <section class="aside-first-section">
+        <div>
+            <i class="fa-solid fa-house fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Home</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user-tie fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Employee</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Sales</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Customer</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-cart-flatbed fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Inventory</span>
+        </div>
+    </section>
+    <section class="aside-second-section">
+        <div>
+            <i class="fa-solid fa-bell fa-xl" style="color: #B5C0D0;"></i>
+            <div><span class="alerts">10</span></div>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 fa-xl" style="color: #ec0909;"></i>
+        </div>
+    </section>
+
+</aside>
+<main>
+    <header>
+        <section class="title-searchbar">
+            <span>Customer Service</span>
+            <div class="search-bar-container">
+                <input type="text" id="customer-search-input" placeholder="Search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="radio-btns">
+                <label for="cus-option1">
+                    <input type="radio" id="cus-option1" name="customerOption" value="all" checked>All
+                </label>
+                <br>
+                <label for="cus-option2">
+                    <input type="radio" id="cus-option2" name="customerOption" value="normal">Normal
+                </label>
+                <label for="cus-option3">
+                    <input type="radio" id="cus-option3" name="customerOption" value="loyalty">Loyalty
+                </label>
+            </div>
+            <button id="btn-add-customer-popup"><i class="fa-solid fa-user-plus fa-xl"></i></button>
+        </section>
+    </header>
+    <section class="customer-container">
+        <div>
+            <span>Total Customers</span>
+            <span class="cus-count-label">100</span>
+        </div>
+        <div>
+            <span>Loyalty Customers</span>
+            <span class="cus-count-label">100</span>
+        </div>
+        <div>
+            <span>Normal Customers</span>
+            <span class="cus-count-label">100</span>
+        </div>
+    </section>
+    <section class="customer-table-container">
+        <table id="customer-detail-table">
+            <thead>
+            <tr>
+                <th>Name & Id</th>
+                <th>Gender</th>
+                <th>Join Loyalty</th>
+                <th>DOM</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>contact</th>
+                <th>Recent Purchase</th>
+                <th>Level</th>
+                <th>Points</th>
+                <th class="action-th">Action</th>
+            </tr>
+            </thead>
+            <tbody id="customer-detail-table-body"></tbody>
+        </table>
+    </section>
+    <section class="cus-popup">
+        <section class="cus-save-popup">
+            <button id="btn-cus-popup-remove"><i class="fa-solid fa-xmark fa-xl" style="color: #F0F0F0"></i></button>
+            <span id="cus-popup-header">ADD NEW CUSTOMER</span>
+            <form id="cus-save-form">
+                <div class="cus-form-group">
+                    <label for="customerName">Customer Name:</label><br>
+                    <input type="text" id="customerName" name="customerName" placeholder="kushan madusha" required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="customerEmail">Email:</label><br>
+                    <input type="email" id="customerEmail" name="customerEmail" placeholder="kushanmadusha62@gmail.com" required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-gender">Gender:</label><br>
+                    <select id="cus-gender" name="cus-gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-dob">Date of Birth:</label><br>
+                    <input type="date" id="cus-dob" name="cus-dob" placeholder="20/02/2002" required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-addressLine1">Address Line 01:</label><br>
+                    <input type="text" id="cus-addressLine1" name="cus-addressLine1" placeholder="216" required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-addressLine2">Address Line 02:</label><br>
+                    <input type="text" id="cus-addressLine2" name="cus-addressLine2"
+                           placeholder="medagama dewagala"><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-addressLine3">Address Line 03:</label><br>
+                    <input type="text" id="cus-addressLine3" name="cus-addressLine3" placeholder="polonnaruwa" required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-addressLine4">Address Line 04:</label><br>
+                    <input type="text" id="cus-addressLine4" name="cus-addressLine4" placeholder="rajamawatha" required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-addressLine5">Address Line 05:</label><br>
+                    <input type="text" id="cus-addressLine5" name="cus-addressLine5" placeholder="51000"
+                           required><br><br>
+                </div>
+                <div class="cus-form-group">
+                    <label for="cus-contactNo">Contact No.:</label><br>
+                    <input type="tel" id="cus-contactNo" name="cus-contactNo" pattern="[0-9]{10}"
+                           placeholder="0772461021" required><br><br>
+                </div>
+                <button id="cus-save-update-btn">Save Customer</button>
+            </form>
+        </section>
+    </section>
+</main>
+<script src="lib/jquary.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="controller/CustomerController.js" type="module"></script>
+</body>
+</html>

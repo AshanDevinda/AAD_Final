@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+    <link rel="stylesheet" href="css/item.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+<aside>
+    <section class="aside-third-section">
+        <img src="assets/AAD%20final%20Logo.jpeg" alt="logo">
+    </section>
+
+    <section class="aside-first-section">
+        <div>
+            <i class="fa-solid fa-house fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Home</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user-tie fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Employee</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Sales</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Customer</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-cart-flatbed fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Inventory</span>
+        </div>
+    </section>
+    <section class="aside-second-section">
+        <div>
+            <i class="fa-solid fa-bell fa-xl" style="color: #B5C0D0;"></i>
+            <div><span class="alerts">10</span></div>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 fa-xl" style="color: #ec0909;"></i>
+        </div>
+    </section>
+
+</aside>
+<main>
+    <header>
+        <section class="title-searchbar">
+            <span>Item Service</span>
+            <div class="search-bar-container">
+                <input type="text" id="item-search-input" placeholder="Search...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="radio-btns">
+                <label for="item-option1">
+                    <input type="radio" id="item-option1" name="itemOption" value="all" checked>All
+                </label>
+                <br>
+                <label for="item-option2">
+                    <input type="radio" id="item-option2" name="itemOption" value="normal">Normal
+                </label>
+                <label for="item-option3">
+                    <input type="radio" id="item-option3" name="itemOption" value="loyalty">Loyalty
+                </label>
+            </div>
+            <button id="btn-add-customer-popup"><i class="fa-solid fa-user-plus fa-xl"></i></button>
+        </section>
+    </header>
+    <section class="item-add-update-container">
+        <div>
+            <img src="assets/Ashan.jpg" width="100" height="100">
+            <input type="file" id="item-save-fileInput" style="display: none;">
+            <i class="fa-solid fa-camera fa-lg" style="color: #7a7c7f;cursor: pointer"
+               onclick="document.getElementById('item-save-fileInput').click()"></i>
+        </div>
+        <div class="item-form-group">
+            <label for="itemName">Item Name:</label><br>
+            <input type="text" id="itemName" name="itemName" placeholder="red shoe" required><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="unitPriceBuy">Buying Price(1):</label><br>
+            <input type="text" id="unitPriceBuy" name="unitPriceBuy" placeholder="200" required><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="unitPriceSell">Selling Price(1):</label><br>
+            <input type="text" id="unitPriceSell" name="unitPriceSell" placeholder="300" required><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="expectedProfit">Expected Price(1):</label><br>
+            <input type="text" id="expectedProfit" name="expectedProfit" placeholder="100" required><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="profitMargin">Profit Margin(%):</label><br>
+            <input type="text" id="profitMargin" name="profitMargin" placeholder="10" required><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="select-gender">Select Gender:</label><br>
+            <select id="select-occasion" name="select-gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="select-verity">Select Verity:</label><br>
+            <select id="select-verity" name="select-verity" required>
+                <option value="Heels">Heels</option>
+                <option value="Flats">Flats</option>
+                <option value="Wedges">Wedges</option>
+                <option value="Flip Flops">Flip Flops</option>
+                <option value="Sandals">Sandals</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Slipers">Slipers</option>
+            </select><br><br>
+        </div>
+        <div class="item-form-group">
+            <label for="select-gender">Select Gender:</label><br>
+            <select id="select-gender" name="select-gender" required>
+                <option value="Formal">Formal</option>
+                <option value="Casual">Casual</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Sport">Sport</option>
+            </select><br><br>
+        </div>
+        <div class="supplier-select-container">
+            <div>
+                <input type="text" placeholder="enter supplier id">
+                <button><i class="fa-solid fa-magnifying-glass fa-sm"></i></button>
+                <button><i class="fa-solid fa-user-tie fa-lg"></i></button>
+            </div>
+            <div>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+                <button>S001</button>
+            </div>
+        </div>
+
+    </section>
+    <section class="customer-table-container">
+        <table id="customer-detail-table">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Size</th>
+                <th>Remain QTY</th>
+                <th>Buying Price</th>
+                <th>Selling Price</th>
+                <th>Expected Profit</th>
+                <th>Profit Margin</th>
+                <th>Status</th>
+                <th class="action-th">Action</th>
+            </tr>
+            </thead>
+            <tbody id="item-detail-table-body"></tbody>
+        </table>
+    </section>
+</main>
+<script src="lib/jquary.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<!--<script src="controller/CustomerController.js" type="module"></script>-->
+</body>
+</html>

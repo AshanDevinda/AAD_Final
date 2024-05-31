@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supplier details</title>
+    <link rel="icon" type="image/x-icon" href="assets/AAD%20final%20Logo.jpeg">
+    <meta name="keyword" content="html">
+    <meta name="description" content="dashboard">
+    <meta name="author" content="il=jse">
+    <meta http-equiv="refresh" content="10000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/supplier.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+<aside>
+    <section class="aside-third-section">
+        <img src="assets/AAD%20final%20Logo.jpeg" alt="logo">
+    </section>
+
+    <section class="aside-first-section">
+        <div>
+            <i class="fa-solid fa-house fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Home</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user-tie fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Employee</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Sales</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-user fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Customer</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-cart-flatbed fa-2xl" style="color: #B5C0D0;"></i>
+            <span>Inventory</span>
+        </div>
+    </section>
+    <section class="aside-second-section">
+        <div>
+            <i class="fa-solid fa-bell fa-xl" style="color: #B5C0D0;"></i>
+            <div><span class="alerts">10</span></div>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 fa-xl" style="color: #ec0909;"></i>
+        </div>
+    </section>
+
+</aside>
+<main>
+    <header>
+        <section class="sup-title-searchbar">
+            <span>Supplier Service</span>
+            <div class="sup-search-bar-container">
+                <input type="text" class="sup-search-input" placeholder="Search...">
+                <i class="fas fa-search sup-search-icon"></i>
+            </div>
+            <div class="sup-radio-btns">
+                <label for="sup-option1">
+                    <input type="radio" id="sup-option1" name="sup-option" value="all" checked> all
+                </label>
+                <label for="sup-option2">
+                    <input type="radio" id="sup-option2" name="sup-option" value="local"> local
+                </label>
+                <label for="sup-option3">
+                    <input type="radio" id="sup-option3" name="sup-option" value="international"> international
+                </label>
+            </div>
+            <button id="btn-add-sup-popup"><i class="fa-solid fa-user-plus fa-xl"></i></button>
+        </section>
+    </header>
+    <section class="supplier-container">
+        <div>
+            <span>International Suppliers</span>
+            <span class="suppliers-lbl"></span>
+        </div>
+        <div>
+            <span>Local Suppliers</span>
+            <span class="suppliers-lbl"></span>
+        </div>
+    </section>
+    <section class="supplier-table-container">
+        <table class="supplier-detail-table">
+            <thead>
+            <tr>
+                <th>Name & Code</th>
+                <th>Category</th>
+                <th>Address</th>
+                <th>Contact 01</th>
+                <th>Contact 02</th>
+                <th>Email</th>
+                <th class="sup-action-th">Action</th>
+            </tr>
+            </thead>
+            <tbody id="sup-table-body">
+            </tbody>
+        </table>
+    </section>
+<!--    sup popup-->
+    <section class="sup-popup">
+        <section class="sup-save-popup">
+            <span id="sup-popup-header">ADD NEW SUPPLIER</span>
+            <form class="sup-save-form">
+                <div class="sup-form-group">
+                    <label for="supplierName">Supplier Name:</label><br>
+                    <input type="text" id="supplierName" name="supplierName" placeholder="kushan madusha"
+                           required><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-category">Category:</label><br>
+                    <select id="sup-category" name="sup-category" required>
+                        <option value="local">local</option>
+                        <option value="international">international</option>
+                    </select><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-email">Email:</label><br>
+                    <input type="email" id="sup-email" name="sup-email" placeholder="kushanmadusha62@gmail.com" required><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-addressLine1">Building No or Name:</label><br>
+                    <input type="text" id="sup-addressLine1" name="sup-addressLine1" placeholder="216" required><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-addressLine2">Lane:</label><br>
+                    <input type="text" id="sup-addressLine2" name="sup-addressLine2"
+                           placeholder="medagama dewagala"><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-addressLine3">Main City:</label><br>
+                    <input type="text" id="sup-addressLine3" name="sup-addressLine3" placeholder="polonnaruwa" required><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-addressLine4">Main State:</label><br>
+                    <input type="text" id="sup-addressLine4" name="sup-addressLine4" placeholder="rajamawatha" required><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-addressLine5">Postal Code:</label><br>
+                    <input type="text" id="sup-addressLine5" name="sup-addressLine5" placeholder="51000"
+                           required><br><br>
+                </div> <div class="sup-form-group">
+                <label for="sup-addressLine6">Country:</label><br>
+                <input type="text" id="sup-addressLine6" name="sup-addressLine6" placeholder="Sri Lanka"
+                       required><br><br>
+            </div>
+                <div class="sup-form-group">
+                    <label for="sup-contactNo1">Contact No.:</label><br>
+                    <input type="tel" id="sup-contactNo1" name="sup-contactNo1" pattern="[0-9]{10}"
+                           placeholder="0772461021" required><br><br>
+                </div>
+                <div class="sup-form-group">
+                    <label for="sup-contactNo2">Contact No.:</label><br>
+                    <input type="tel" id="sup-contactNo2" name="sup-contactNo2" pattern="[0-9]{10}"
+                           placeholder="0775017154" required><br><br>
+                </div>
+                <button id="sup-save-update-btn">Save Supplier</button>
+            </form>
+        </section>
+    </section>
+</main>
+<script src="lib/jquary.min.js"></script>
+<script src="controller/SupplierController.js" type="module"></script>
+</body>
+</html>

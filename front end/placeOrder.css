@@ -1,0 +1,632 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-color: #000000
+}
+
+/*aside*/
+aside {
+    width: 150px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-third-section {
+    width: 100%;
+    height: 20%;
+}
+
+.aside-third-section > img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #B5C0D0;
+}
+
+.aside-first-section {
+    width: 50px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+}
+
+.aside-first-section > div > span {
+    width: fit-content;
+    font-size: 10px;
+    color: #B5C0D0;
+    position: absolute;
+    display: block;
+    padding-top: 12px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-family: Arial;
+    letter-spacing: 2px;
+}
+
+.aside-second-section {
+    width: 100px;
+    height: 15%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    border-top: 1px solid #2B3A55;
+}
+
+.aside-second-section > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.aside-second-section > div > i {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.aside-second-section > div > i:first-child {
+    top: 30px;
+}
+
+.aside-second-section > div > i:last-child {
+    bottom: 30px;
+}
+
+.aside-second-section > div > div {
+    width: 17px;
+    height: 14px;
+    background-color: #FFC55A;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 18px;
+    left: 15px;
+}
+
+.alerts {
+    font-size: 8px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    font-weight: bold;
+    color: white;
+}
+
+/*main*/
+main {
+    width: calc(100vw - 155px);
+    height: calc(100% - 20px);
+    position: absolute;
+    background-color: #F5F5F5;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 20px;
+}
+
+/*......................................................................*/
+/*flex container*/
+.flex-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+}
+
+.left-container {
+    flex: 3.5;
+    overflow-y: scroll;
+    margin-right: 10px;
+}
+
+/*left container -> search bar*/
+.title-searchbar {
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 10px;
+}
+
+.title-searchbar > span {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.search-bar-container {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    height: fit-content;
+    margin: auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.title-searchbar > div {
+    position: absolute;
+    right: 20px;
+    height: fit-content;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.title-searchbar > div > button:first-child {
+    border: none;
+    background-color: #dddddd;
+    /*margin-top: 25px;*/
+    /*transform: translateY(-50%);*/
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 7px 10px;
+    margin-right: 20px;
+}
+
+.title-searchbar > div > button:first-child > i {
+    margin-right: 10px
+}
+
+.title-searchbar > div > button:last-child {
+    border-radius: 100%;
+    border: none;
+    background-color: #F5F5F5;
+    /*margin-top: 25px;*/
+    /*transform: translateY(-50%);*/
+}
+
+/*#search-input::placeholder {*/
+/*    color: #F2BE22;*/
+/*}*/
+
+/*left container -> categories*/
+.categories {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /*padding-left: 0px;*/
+    grid-gap: 10px;
+    width: calc(100% - 10px);
+    height: 125px;
+    margin: 20px auto 0 auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: sticky;
+    top: 70px;
+    z-index: 5;
+    /*background-color: #FB9AD1;*/
+}
+
+.categories > div {
+    position: relative;
+}
+
+.categories > div > button {
+    display: block;
+    padding: 40px 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    margin: 10px auto 0px auto;
+    position: relative;
+}
+
+.categories > div:first-child > button {
+    border: 1px solid black;
+    background-image: url('assets/all.png');
+    background-position-x: 24px;
+    background-position-y: 24px;
+}
+
+.categories > div:nth-child(2) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div:nth-child(3) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div:nth-child(4) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div:nth-child(5) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div:nth-child(6) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div:nth-child(7) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div:nth-child(8) > button {
+    background-image: url('assets/shoe.webp');
+    background-size: cover;
+}
+
+.categories > div > span {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 5px;
+    margin: auto;
+    color: black;
+    font-family: Arial;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+/*left container -> items*/
+.items-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.selected-category {
+    width: fit-content;
+    position: fixed;
+    margin-bottom: 100px;
+    z-index: 5;
+}
+
+.selected-category > span:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    letter-spacing: 1px;
+    display: inline;
+    margin-left: 30px;
+}
+
+.selected-category > span:nth-child(2) {
+    font-size: 13px;
+    font-family: Arial;
+    letter-spacing: 1px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 25px;
+    /*margin-left: 30px;*/
+    position: relative;
+    top: 25px;
+    margin: auto;
+    /*padding-left: 10px;*/
+    margin-left: 2%;
+    /*background-color: #4bc0c0;*/
+}
+
+.items > div {
+    padding: 5px 10px 10px 10px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.items > div > button {
+    padding: 75px 75px;
+    border-radius: 15px;
+    border: none;
+    background-image: url("assets/shoe.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.add-item-icon {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+}
+
+.item-name {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.item-price {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.items > div > div {
+    margin-top: 3px
+}
+
+.items > div > div > span:first-child {
+    margin-left: 3px;
+    color: #F5F5F5;
+    font-size: 13px;
+    padding: 0px 6px;
+    font-weight: bold;
+    background-color: #4F4557;
+    border-radius: 20px;
+}
+
+.items > div > div > span:nth-child(2) {
+    margin-left: 3px;
+    color: #F5F5F5;
+    font-size: 13px;
+    padding: 0px 6px;
+    font-weight: bold;
+    background-color: #AD88C6;
+    border-radius: 20px;
+}
+
+.items > div > div > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px
+}
+
+.items > div > div > div > button {
+    border-radius: 50px;
+    border: none;
+    color: #4F4557;
+    font-weight: bold
+}
+
+/*right container*/
+.right-container {
+    flex: 1;
+    position: relative;
+    /*background-color: #2AA9D2;*/
+    /*display: none;*/
+}
+
+/*order detail header*/
+.order-list-header-container {
+    width: 96%;
+    height: 50px;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.texts > span:first-child {
+    font-size: 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.texts > span:last-child {
+    font-size: 13px;
+}
+
+.order-list-btns > button {
+    background-color: #F5F5F5;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/*supplier select container*/
+.supplier-select-container {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black
+}
+.supplier-select-container > div:first-child > input {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-style: italic;
+    border: none;
+}
+.supplier-select-container > div:first-child > button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.supplier-select-container > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    overflow-y: scroll;
+}
+.supplier-select-container > div:nth-child(2) > button {
+    width: 97%;
+    min-height: 30px;
+    border: none;
+    border-top: 1px solid #dddddd;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/*buying item container*/
+.buying-items-container {
+    margin-top: 10px;
+    width: 98%;
+    height: 48%;
+    overflow-y: scroll;
+}
+
+.item-card {
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 5px;
+    /*background-color: #FB9AD1;*/
+    /*padding: ;*/
+}
+
+.item-card > div:first-child {
+    /*background-color: #FB9AD1;*/
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-details-img {
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.item-details-name {
+    display: block;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.item-details-price {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+}
+
+.item-count {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.item-count > button {
+    border: none;
+    border-radius: 10px;
+}
+
+.discount-remove-btns {
+    display: flex;
+}
+
+.discount-remove-btns > button {
+    width: 50%;
+    background-color: black;
+    display: none;
+}
+
+.total-fee-container {
+    width: 98%;
+    height: 100px;
+    /*background-color: #000000;*/
+    margin-top: 10px;
+    /*border-radius: 20px;*/
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.amount-title {
+    width: 94%;
+    /*background-color: #FB9AD1;*/
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    /*border-radius: 20px;*/
+}
+
+.amount-title > span {
+    font-weight: bold;
+}
+
+.amount-title:nth-child(3) > span:first-child, .amount-title:nth-child(3) > span:last-child {
+    color: #008DDA;
+}
+
+/*add to inventory btn*/
+#total-btn {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    border-bottom-right-radius: 20px;
+    background-color: #008DDA;
+    border: none;
+    color: #eeeeee;
+    font-weight: bold;
+}
+
